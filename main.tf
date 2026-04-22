@@ -41,7 +41,7 @@ resource "docker_image" "nginx" {
 # Contenedores Alpine
 #########################
 resource "docker_container" "alpine_nodes" {
-  count = 3
+  count = 4
 
   name  = "alpine-${count.index + 1}"
   image = docker_image.alpine.image_id
